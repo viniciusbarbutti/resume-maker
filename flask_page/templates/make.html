@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Make</title>
+    </head>
+    <body>
+        <form method="POST" action="/make">
+            {{ form.name.label }} {{ form.name() }}
+            <br>
+            {{ form.function.label }} {{ form.function() }}
+            <br>
+            {{ form.phone.label }} {{ form.phone() }}
+            <br>
+            {{ form.email.label }} {{ form.email() }}
+            <br>
+            {{ form.address.label }} {{ form.address() }}
+            <br>
+            {{ form.education.label }} {{ form.education() }}
+            <br>
+            {{ form.experience.label }} {{ form.experience() }}
+            <br>
+            {{ form.skills.label }} {{ form.skills() }}
+            <br>
+            {{ form.languages.label }} {{ form.languages() }}
+            <br>
+            submit {{ form.but() }}
+    </body>
+</html>
