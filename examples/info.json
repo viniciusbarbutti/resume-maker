@@ -8,10 +8,12 @@
 
     "education": [
         ["PhD in the streets - Harvard",
-         "2001"],
+         "2001",
+         "phd in doing absolutelly nothing 24/7"],
 
         ["PhD in python - PyCon",
-         "every year"]
+         "every year",
+         "one single event and im already pro"]
 
     ],
 
@@ -30,11 +32,16 @@
         ["Python", 5],
         ["Java", 2],
         ["C++", 4],
-        ["JS", 1]
+        ["JS", 1],
+        ["CSS", 2],
+        ["HTML", 1],
+        ["Cooking", 3]
         ],
 
     "languages": [
         ["Elvish", "Fluent"],
-        ["English", "Basic"]
+        ["English", "Basic"],
+        ["Pirate English", "Native"],
+        ["Lusitanian", "Fluent"]
         ]
 }
