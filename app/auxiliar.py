@@ -1,5 +1,6 @@
 from json import loads
 
+
 keys = {'k_name': 'name',
         'k_function': 'function',
         'k_phone': 'phone',
@@ -79,3 +80,20 @@ def mount_i18n(lang: str) -> dict:
     :return: Um dicionario monstado com a lingua escolida
     """
     return {e: langs[lang][keys[e]] for e in keys}
+
+
+def mount_json(form) -> dict:
+    """
+        Funcao que monta um JSON a partir dos dados de um Form
+
+        :args:
+            - form: Formulario com os dados
+
+        :return: Um dicionario com os dados vindos do Form
+    """
+
+    data = [keys[e] for e in keys]
+    data_form [(e.label.field_id, e.data) for e in form]
+
+    return {chave: valor[1] for chave, valor in zip(data, data_form)
+            if valor[0] == chave}

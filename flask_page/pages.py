@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from wtforms import StringField, Form, SubmitField
+from app.auxiliar import mount_json
+from app.make import create
 
 page = Flask(__name__)
 
@@ -26,8 +28,9 @@ def index():
 def make():
     if request.method == 'GET':
         return render_template('make.html', form=Cadastro())
+
     else:
-        return 'Resume submitted'
+        return mount_json(Cadastro(request.form))
 
 
 @page.route('/themes', methods=['GET'])
