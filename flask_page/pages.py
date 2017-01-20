@@ -3,6 +3,7 @@ from wtforms import StringField, Form, SubmitField
 from app.auxiliar import mount_json
 from app.make import create
 
+
 page = Flask(__name__)
 
 
@@ -30,7 +31,7 @@ def make():
         return render_template('make.html', form=Cadastro())
 
     else:
-        return mount_json(Cadastro(request.form))
+        return create(mount_json(Cadastro(request.form)))
 
 
 @page.route('/themes', methods=['GET'])
@@ -38,5 +39,5 @@ def themes():
     pass
 
 
-def start_flask():
-    page.run()
+# def start_flask():
+page.run()
